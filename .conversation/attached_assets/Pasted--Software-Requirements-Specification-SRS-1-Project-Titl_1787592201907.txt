@@ -1,0 +1,373 @@
+# Software Requirements Specification (SRS)
+
+## 1. Project Title
+
+**The Desert Diary by SS — Official Bakery Website**
+
+---
+
+## 2. Project Overview
+
+The Desert Diary by SS is a home-bakery business that accepts customized cake orders, prepares cakes from home and provides customer delivery/pickup according to its actual service arrangements.
+
+The website will act as the bakery's official digital storefront.
+
+The primary objectives are:
+
+1. Present the bakery professionally.
+2. Showcase authentic cake work.
+3. Allow customers to browse the catalogue.
+4. Explain customization options.
+5. Make ordering easy.
+6. Provide contact and social-media access.
+7. Establish a memorable premium visual identity.
+8. Provide a responsive experience across desktop and mobile.
+
+---
+
+## 3. Target Users
+
+### Primary Users
+
+Customers looking for:
+
+- Birthday cakes
+- Custom cakes
+- Theme cakes
+- Floral cakes
+- Cupcakes
+- Bento cakes
+- Special occasion cakes
+
+### Secondary Users
+
+People discovering the bakery through:
+
+- Instagram
+- WhatsApp
+- Printed hoarding
+- Promotional posters
+- Word of mouth
+
+---
+
+## 4. Functional Requirements
+
+### FR-01 — Homepage
+
+The system shall provide a visually engaging homepage containing:
+
+- Brand name
+- “by SS”
+- Brand tagline
+- Hero cake imagery
+- Primary CTA
+- Secondary CTA
+- Navigation
+
+---
+
+### FR-02 — Navigation
+
+The system shall provide access to:
+
+- Home
+- Our Cakes
+- Custom Cakes
+- Our Story
+- Gallery
+- Contact
+
+---
+
+### FR-03 — Cake Catalogue
+
+Users shall be able to browse available cake products.
+
+Each product may contain:
+
+- Name
+- Image
+- Category
+- Description
+- Flavours
+- Sizes
+- Price
+- Customization status
+
+Only available/verified information shall be displayed.
+
+---
+
+### FR-04 — Category Filtering
+
+Users shall be able to filter cakes by available categories.
+
+Example:
+
+- All
+- Birthday
+- Custom
+- Floral
+- Theme
+- Cupcakes
+- Bento
+- Special Occasion
+
+Categories must be based on the actual bakery catalogue.
+
+---
+
+### FR-05 — Cake Details
+
+Users shall be able to view additional information about an individual cake.
+
+---
+
+### FR-06 — Custom Cake Information
+
+The website shall explain the bakery's customization process.
+
+Potential customization parameters:
+
+- Theme
+- Colour
+- Flavour
+- Size
+- Message
+- Decorative elements
+
+Only supported options shall be displayed.
+
+---
+
+### FR-07 — Gallery
+
+The website shall provide a gallery containing authentic cake photographs.
+
+The gallery shall support:
+
+- Responsive layout
+- Image viewing
+- Lightbox
+- Smooth transitions
+
+---
+
+### FR-08 — Ordering
+
+The website shall provide clear ordering CTAs.
+
+Where applicable, buttons shall open WhatsApp with a prefilled message.
+
+Example:
+
+“Hi! I’d like to enquire about a cake from The Desert Diary.”
+
+The exact WhatsApp number must come from the supplied business information.
+
+---
+
+### FR-09 — Instagram
+
+The website shall link to the bakery's actual Instagram account.
+
+---
+
+### FR-10 — Delivery
+
+The website shall describe delivery only using verified business information.
+
+If delivery details are not available, do not fabricate them.
+
+---
+
+### FR-11 — Responsive Layout
+
+The website shall support:
+
+- Desktop
+- Tablet
+- Mobile
+
+---
+
+## 5. Non-Functional Requirements
+
+### NFR-01 — Performance
+
+The website should load efficiently and avoid unnecessary large assets.
+
+### NFR-02 — Accessibility
+
+The website should support:
+
+- Keyboard navigation
+- Screen readers
+- Alt text
+- Accessible controls
+- Reduced motion
+
+### NFR-03 — Security
+
+Do not expose sensitive information.
+
+Do not place API keys or secrets in frontend code.
+
+### NFR-04 — Maintainability
+
+Cake data and business data should be separated from UI components.
+
+### NFR-05 — Scalability
+
+The architecture should allow future addition of:
+
+- New cakes
+- New categories
+- New photographs
+- New products
+- Customer enquiry forms
+- Payment integration
+- Online ordering
+
+---
+
+## 6. Visual Requirements
+
+The visual system shall follow the existing bakery branding.
+
+Primary aesthetic:
+
+- Blush pink
+- Cream
+- Ivory
+- White
+- Rose/berry pink
+- Subtle champagne gold
+
+Design motifs:
+
+- Flowers
+- Fine botanical lines
+- Hearts
+- Soft decorative flourishes
+- Elegant frames
+- Cake photography
+
+---
+
+## 7. Animation Requirements
+
+Animations shall be:
+
+- Smooth
+- Subtle
+- Premium
+- Responsive
+- Performance-conscious
+
+Preferred animation types:
+
+- Scroll reveal
+- Parallax
+- Image reveal
+- Staggered card animation
+- Hover interaction
+- Modal transition
+- Floating decorative elements
+
+Avoid excessive animation.
+
+---
+
+## 8. 3D Requirements
+
+3D should be used selectively.
+
+Possible implementations:
+
+- Layered depth
+- Parallax
+- Floating decorative elements
+- 3D-like cake presentation
+- Lightweight WebGL elements
+
+The 3D experience shall never compromise:
+
+- Loading speed
+- Mobile usability
+- Accessibility
+- Content readability
+
+---
+
+## 9. SEO Requirements
+
+Implement:
+
+- Page title
+- Meta description
+- Open Graph metadata
+- Semantic HTML
+- Proper heading hierarchy
+- Image alt text
+- Appropriate structured data where verified business information is available
+
+---
+
+## 10. Content Integrity
+
+The system shall not invent business information.
+
+Never fabricate:
+
+- Prices
+- Testimonials
+- Reviews
+- Address
+- Delivery charges
+- Delivery radius
+- Opening hours
+- Flavours
+- Ingredients
+- Certifications
+- Policies
+
+Unknown information should be marked as pending or omitted.
+
+---
+
+## 11. Future Enhancements
+
+Potential future versions may include:
+
+- Online cake customization
+- Customer accounts
+- Order management
+- Payment gateway
+- Admin dashboard
+- Automated order confirmation
+- Customer reviews
+- Coupon system
+- Inventory management
+- Delivery tracking
+- Analytics
+
+These are outside the initial MVP unless explicitly requested.
+
+---
+
+## 12. Success Criteria
+
+The website is successful when:
+
+1. A first-time visitor immediately understands what The Desert Diary is.
+2. Authentic cake photographs are prominently displayed.
+3. Customers can easily browse cakes.
+4. Customers can understand customization.
+5. Customers can easily contact/order from the baker.
+6. The website looks professional on mobile and desktop.
+7. Animations feel premium rather than excessive.
+8. The website visually matches the existing posters and hoarding.
+9. No fabricated business information is presented.
+10. The site feels like a genuine premium bakery brand rather than a template.

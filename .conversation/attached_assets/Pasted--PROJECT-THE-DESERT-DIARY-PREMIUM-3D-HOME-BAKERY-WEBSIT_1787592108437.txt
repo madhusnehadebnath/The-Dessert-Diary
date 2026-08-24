@@ -1,0 +1,798 @@
+# PROJECT: THE DESERT DIARY — PREMIUM 3D HOME BAKERY WEBSITE
+
+You are an expert senior web designer, frontend engineer, UI/UX designer, motion designer and creative developer.
+
+Build a production-quality, responsive website for a premium home bakery called:
+
+**THE DESERT DIARY**
+**by SS**
+
+Brand tagline:
+
+**“You bring the occasion. We’ll bring the cake.”**
+
+This is a real small home-bakery business. The baker takes customer orders, creates cakes from home and may personally deliver them.
+
+The attached assets contain the bakery's existing visual identity:
+- Final promotional poster
+- Final landscape shop hoarding
+- Menu/catalogue
+- Original cake photographs
+- Other bakery visual references
+
+IMPORTANT:
+Study all attached assets before designing anything.
+
+The website MUST feel like an extension of the existing brand, not like a generic bakery template.
+
+---
+
+## 1. CORE CREATIVE DIRECTION
+
+Create a sophisticated, elegant, feminine and premium bakery website.
+
+Visual personality:
+
+- Soft
+- Romantic
+- Elegant
+- Warm
+- Handmade
+- Premium
+- Artistic
+- Whimsical
+- Modern
+- Slightly luxurious
+
+Primary visual palette should be inspired by the existing materials:
+
+- Blush pink
+- Soft pastel pink
+- Warm cream
+- Ivory
+- White
+- Very subtle champagne/gold accents
+- Deep berry/rose pink for important typography and CTAs
+- Soft brown/charcoal for readable body text
+
+Do NOT make the website overly saturated.
+
+Do NOT use a generic pink bakery template.
+
+Do NOT make it look childish.
+
+Do NOT use excessive gradients.
+
+Do NOT use excessive glassmorphism.
+
+Do NOT use excessive shadows.
+
+Do NOT fill every section with animations.
+
+The final result should feel like:
+
+**a premium boutique patisserie website combined with a beautiful modern portfolio.**
+
+---
+
+# 2. MOST IMPORTANT DESIGN RULE
+
+The attached cake photographs are the actual cakes made by the baker.
+
+Use those photographs prominently.
+
+Do not replace them with:
+- stock cake photographs
+- random internet images
+- AI-generated cake photographs
+- placeholder cake images
+
+If an image needs editing for presentation, use tasteful cropping, masking, background removal or subtle enhancement while preserving the original cake.
+
+The cake itself must remain authentic.
+
+---
+
+# 3. WEBSITE EXPERIENCE
+
+The website should feel cinematic when the visitor first opens it.
+
+The experience should progress approximately like:
+
+BRAND INTRO
+↓
+HERO
+↓
+DISCOVER THE CAKES
+↓
+CAKE COLLECTION
+↓
+CUSTOM CAKES
+↓
+THE BAKER / OUR STORY
+↓
+HOW TO ORDER
+↓
+DELIVERY
+↓
+GALLERY
+↓
+FINAL ORDER CTA
+↓
+FOOTER
+
+Use smooth scrolling and sophisticated scroll-triggered animations.
+
+Animations must enhance the brand rather than distract from it.
+
+---
+
+# 4. HERO SECTION
+
+Create a visually impressive hero section.
+
+Desktop:
+
+- Full viewport hero
+- Elegant cream/ivory background
+- Soft floral artwork inspired by the attached hoarding
+- Large elegant “The Desert Diary”
+- Smaller “by SS”
+- Tagline underneath
+- One or two beautiful authentic cake photographs
+- Strong CTA buttons
+
+Primary CTA:
+
+**Explore Our Cakes**
+
+Secondary CTA:
+
+**Order Your Cake**
+
+Possible supporting line:
+
+**Handcrafted cakes made especially for your special moments.**
+
+Use layered depth/parallax effects.
+
+The floral elements can move extremely subtly as the user moves the mouse.
+
+Cake imagery can have subtle floating/parallax movement.
+
+Typography should be elegant but highly readable.
+
+---
+
+# 5. BRAND INTRO ANIMATION
+
+Create a tasteful initial entrance animation.
+
+When the website loads:
+
+1. Soft cream background appears.
+2. Small decorative floral/heart element fades in.
+3. “The Desert Diary” elegantly reveals.
+4. “by SS” appears.
+5. Tagline fades upward.
+6. Main hero imagery gently enters.
+7. Navigation becomes visible.
+
+Keep the animation short.
+
+Do NOT create a long loading screen.
+
+Do NOT make users wait several seconds before accessing the website.
+
+Respect `prefers-reduced-motion`.
+
+---
+
+# 6. NAVIGATION
+
+Create a premium sticky navigation.
+
+Desktop:
+
+THE DESERT DIARY logo/wordmark on the left.
+
+Navigation:
+
+- Home
+- Our Cakes
+- Custom Cakes
+- Our Story
+- Gallery
+- Contact
+
+Right-side CTA:
+
+**Order Now**
+
+Mobile:
+
+- Compact logo
+- Hamburger menu
+- Smooth animated mobile navigation
+
+Navigation should become slightly more compact after scrolling.
+
+---
+
+# 7. OUR CAKES SECTION
+
+This is one of the most important sections.
+
+Title:
+
+**A Little Something for Every Occasion**
+
+Subheading:
+
+Beautiful cakes, lovingly made to order.
+
+Create category filtering.
+
+Categories may include:
+
+- All
+- Birthday Cakes
+- Custom Cakes
+- Floral Cakes
+- Theme Cakes
+- Cupcakes
+- Bento Cakes
+- Special Occasion Cakes
+
+Only display categories/products that are actually supported by the supplied menu/assets.
+
+Each cake card should contain:
+
+- Authentic cake image
+- Cake name
+- Short description
+- Flavour if known
+- Available sizes if known
+- Price if supplied
+- View Details button
+- Order button
+
+Do not invent prices.
+
+If pricing information is missing, use:
+
+**Price on request**
+
+rather than creating fake prices.
+
+---
+
+# 8. CAKE CARD INTERACTION
+
+Cake cards should feel premium.
+
+On hover:
+
+- Very subtle image zoom
+- Soft lift
+- Gentle shadow
+- Elegant decorative animation
+- CTA appears smoothly
+
+Do not use excessive bouncing.
+
+On mobile, animations must remain performant.
+
+Clicking a cake should open a beautiful product/detail modal or dedicated detail view.
+
+The detail view should contain:
+
+- Large image
+- Cake name
+- Description
+- Available flavour options
+- Available sizes
+- Customization information
+- Price if available
+- Order button
+
+---
+
+# 9. 3D / IMMERSIVE EXPERIENCE
+
+The website should have tasteful 3D elements.
+
+Do NOT turn the whole website into a video-game environment.
+
+Use 3D where it adds value.
+
+Possible 3D/immersive elements:
+
+### Hero
+Layered cake imagery with depth/parallax.
+
+### Floating decorations
+Very subtle floating:
+- petals
+- tiny hearts
+- sparkles
+- crumbs
+- soft flour particles
+
+### Cake showcase
+Create a premium 3D-like presentation using layered imagery and depth.
+
+If actual WebGL/Three.js is used, keep it lightweight.
+
+Potential technology:
+
+- Three.js
+- React Three Fiber
+- Framer Motion
+- GSAP
+
+Choose technologies based on performance and reliability.
+
+Do not add a heavy 3D library simply for the sake of saying the site is 3D.
+
+The website should still load quickly.
+
+---
+
+# 10. CUSTOM CAKES SECTION
+
+Make this a major selling point.
+
+Headline:
+
+**Your Idea. Her Creativity. Your Cake.**
+
+Explain that customers can request personalized cakes.
+
+Show examples from the supplied cake photographs.
+
+Customization options may include:
+
+- Theme
+- Colour
+- Flavour
+- Message
+- Decoration
+- Cake style
+- Occasion
+
+Do not claim a customization option unless it is supported by the business information.
+
+Add CTA:
+
+**Create Your Cake**
+
+This should lead to the ordering/contact flow.
+
+---
+
+# 11. OUR STORY SECTION
+
+Create a warm storytelling section introducing the home baker.
+
+The tone should feel personal and genuine.
+
+Do not invent a fake biography.
+
+Use placeholder content where information has not yet been supplied.
+
+For example:
+
+“Every cake from The Desert Diary is made to order with care, creativity and a little extra love.”
+
+Use a beautiful baker/cake photograph if supplied.
+
+---
+
+# 12. HOW TO ORDER
+
+Create a clean four-step process.
+
+### 01 — Tell Us Your Idea
+Send your preferred cake style, flavour, size and occasion.
+
+### 02 — Customize
+Choose the details that make your cake yours.
+
+### 03 — Confirm
+Confirm the design, date and order details.
+
+### 04 — We Bake & Deliver
+The cake is freshly prepared and delivered/picked up according to the bakery's actual service.
+
+Do not invent delivery policies.
+
+---
+
+# 13. GALLERY
+
+Create a premium masonry-style gallery using the baker's actual photographs.
+
+Features:
+
+- Masonry/grid layout
+- Smooth image reveal
+- Lightbox
+- Image zoom
+- Category filtering if appropriate
+
+The gallery should make the baker's work the star.
+
+Do not over-design the gallery.
+
+---
+
+# 14. ORDER / CONTACT SECTION
+
+Create a strong conversion section.
+
+Headline:
+
+**Ready to make your occasion sweeter?**
+
+Supporting text:
+
+**Let's create something deliciously special for you.**
+
+Buttons:
+
+**Order on WhatsApp**
+
+**Follow on Instagram**
+
+Use the exact contact details supplied in the attached materials.
+
+Do not invent contact information.
+
+WhatsApp should open the appropriate WhatsApp link.
+
+Instagram should open the bakery's actual Instagram profile.
+
+---
+
+# 15. FOOTER
+
+Include:
+
+The Desert Diary
+by SS
+
+“You bring the occasion. We’ll bring the cake.”
+
+Navigation links.
+
+Instagram.
+
+WhatsApp.
+
+Copyright.
+
+A subtle floral decorative element.
+
+---
+
+# 16. RESPONSIVE DESIGN
+
+The website must be designed mobile-first.
+
+Test:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The mobile version must NOT simply be a compressed desktop layout.
+
+On mobile:
+
+- Typography scales correctly
+- Images remain attractive
+- Navigation becomes hamburger
+- 3D effects are reduced where necessary
+- Animations remain smooth
+- Buttons are thumb-friendly
+- No horizontal scrolling
+- No text overflow
+
+---
+
+# 17. PERFORMANCE
+
+This is extremely important.
+
+Optimize all images.
+
+Use:
+
+- WebP/AVIF where appropriate
+- Lazy loading
+- Responsive images
+- Proper image dimensions
+- Code splitting where useful
+- Efficient animation
+- GPU-friendly transforms
+
+Avoid:
+
+- unnecessary JavaScript
+- huge libraries
+- autoplay heavy videos
+- excessive WebGL
+- huge unoptimized images
+
+The website should feel premium AND fast.
+
+---
+
+# 18. ACCESSIBILITY
+
+Implement:
+
+- Semantic HTML
+- Proper heading hierarchy
+- Alt text
+- Keyboard navigation
+- Visible focus states
+- Good contrast
+- Accessible buttons
+- Reduced motion support
+- Proper form labels
+
+Do not sacrifice accessibility for aesthetics.
+
+---
+
+# 19. SEO
+
+Implement basic SEO.
+
+Title:
+
+**The Desert Diary by SS | Custom Cakes & Homemade Bakes**
+
+Create an appropriate meta description.
+
+Use semantic headings.
+
+Add Open Graph metadata.
+
+Use descriptive image alt text.
+
+Create appropriate structured data if enough real business information is available.
+
+Do not fabricate address/business information.
+
+---
+
+# 20. TECHNICAL STACK
+
+Prefer a modern production-quality stack such as:
+
+- React
+- TypeScript
+- Vite or Next.js
+- Tailwind CSS or well-structured CSS
+- Framer Motion and/or GSAP
+- Three.js / React Three Fiber only where genuinely useful
+
+Choose the most stable stack supported by the environment.
+
+Keep components modular.
+
+Suggested component architecture:
+
+/src
+  /components
+    Navbar
+    Hero
+    CakeCard
+    CakeGrid
+    CakeModal
+    CategoryFilter
+    CustomCakeSection
+    StorySection
+    OrderSteps
+    Gallery
+    ContactCTA
+    Footer
+    FloatingDecorations
+
+  /pages
+    Home
+
+  /data
+    cakes
+    categories
+    business
+
+  /assets
+    cakes
+    branding
+    decorative
+
+  /styles
+    global
+    animations
+
+---
+
+# 21. DATA ARCHITECTURE
+
+Do not hard-code every cake directly into UI components.
+
+Create structured product data.
+
+Example:
+
+{
+  id,
+  name,
+  category,
+  image,
+  description,
+  flavours,
+  sizes,
+  price,
+  customizable
+}
+
+Keep business data separate from presentation.
+
+This will make it easy to update the menu later.
+
+---
+
+# 22. DESIGN SYSTEM
+
+Create reusable design tokens.
+
+Colors:
+
+--cream
+--ivory
+--blush
+--pastel-pink
+--rose
+--berry
+--gold
+--text-dark
+
+Use CSS variables.
+
+Typography should combine:
+
+- Elegant display/script typography for the brand
+- Highly readable serif/sans-serif typography for content
+
+Do not use decorative script fonts for long paragraphs.
+
+---
+
+# 23. ANIMATION SYSTEM
+
+Use a consistent animation language.
+
+Preferred effects:
+
+- fade-up
+- fade-in
+- scale-in
+- image reveal
+- gentle parallax
+- floating decorative elements
+- staggered card reveal
+- smooth modal transitions
+- subtle hover interactions
+
+Animation timing should generally feel slow, elegant and premium.
+
+Avoid:
+
+- spinning logos
+- bouncing text
+- excessive particle effects
+- flashing elements
+- random movement
+- aggressive transitions
+
+The overall animation personality should feel:
+
+**soft + cinematic + luxurious + handmade**
+
+---
+
+# 24. IMPORTANT CONTENT RULE
+
+NEVER invent:
+
+- prices
+- flavours
+- cake sizes
+- delivery areas
+- delivery charges
+- business address
+- opening hours
+- payment policies
+- ingredients
+- certifications
+- reviews
+- customer testimonials
+
+If information is not provided, create a clear placeholder or omit it.
+
+Use only verified information from the attached resources.
+
+---
+
+# 25. VISUAL QUALITY BAR
+
+The final result should NOT look like:
+
+- a school project
+- a generic bakery template
+- a basic HTML website
+- an AI-generated landing page
+- a cluttered Canva poster converted into HTML
+
+It SHOULD look like:
+
+**a premium boutique bakery brand that could confidently be shown to paying customers.**
+
+Prioritize visual hierarchy, whitespace, typography, photography and storytelling.
+
+---
+
+# 26. DEVELOPMENT PROCESS
+
+Do NOT generate the entire application blindly in one pass.
+
+First:
+
+1. Inspect all attached assets.
+2. Identify the brand colors, typography style, visual motifs and cake categories.
+3. Create the design system.
+4. Create the website architecture.
+5. Build the homepage.
+6. Add cake catalogue.
+7. Add custom cake section.
+8. Add gallery.
+9. Add ordering/contact functionality.
+10. Add animations.
+11. Optimize mobile.
+12. Test everything.
+
+After each major stage, check for:
+- visual consistency
+- responsiveness
+- broken images
+- console errors
+- accessibility problems
+- performance problems
+- animation glitches
+
+If an existing implementation already exists, improve it instead of unnecessarily rebuilding it.
+
+---
+
+# FINAL GOAL
+
+Create a website that makes a visitor immediately think:
+
+**“This is a real premium bakery brand, and I want to order a cake from them.”**
+
+The website should make the cakes the hero while the animation, 3D depth, floral visuals and typography create the memorable brand experience.
+
+Build with taste.
+
+Less gimmicks.
+More elegance.
+
+The final website must feel like:
+
+**THE DESERT DIARY — a little world of cakes, celebrations and handmade sweetness.**

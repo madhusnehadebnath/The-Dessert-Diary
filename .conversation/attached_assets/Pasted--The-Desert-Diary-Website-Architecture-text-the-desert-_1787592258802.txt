@@ -1,0 +1,191 @@
+# The Desert Diary — Website Architecture
+
+```text
+the-desert-diary/
+│
+├── public/
+│   ├── images/
+│   │   ├── cakes/
+│   │   ├── gallery/
+│   │   ├── branding/
+│   │   └── decorations/
+│   │
+│   ├── favicon/
+│   └── og-image/
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Navbar
+│   │   ├── Hero
+│   │   ├── BrandIntro
+│   │   ├── SectionHeading
+│   │   ├── CakeCard
+│   │   ├── CakeGrid
+│   │   ├── CakeFilter
+│   │   ├── CakeDetails
+│   │   ├── CustomCakeSection
+│   │   ├── StorySection
+│   │   ├── OrderSteps
+│   │   ├── Gallery
+│   │   ├── ContactCTA
+│   │   ├── WhatsAppButton
+│   │   ├── Footer
+│   │   └── FloatingDecorations
+│   │
+│   ├── pages/
+│   │   └── Home
+│   │
+│   ├── data/
+│   │   ├── cakes.ts
+│   │   ├── categories.ts
+│   │   └── business.ts
+│   │
+│   ├── assets/
+│   │   ├── cakes/
+│   │   ├── branding/
+│   │   └── decorative/
+│   │
+│   ├── animations/
+│   │   ├── heroAnimations
+│   │   ├── scrollAnimations
+│   │   └── pageTransitions
+│   │
+│   ├── styles/
+│   │   ├── globals
+│   │   ├── variables
+│   │   └── typography
+│   │
+│   ├── App
+│   └── main
+│
+├── README.md
+├── SRS.md
+├── package.json
+└── configuration files
+```
+
+---
+
+# PAGE FLOW
+
+## 01 — INTRO
+
+Animated brand reveal.
+
+↓
+
+## 02 — HERO
+
+**The Desert Diary**
+
+by SS
+
+“You bring the occasion. We’ll bring the cake.”
+
+[Explore Our Cakes]
+
+[Order Now]
+
+↓
+
+## 03 — BRAND STATEMENT
+
+Short emotional introduction to the bakery.
+
+↓
+
+## 04 — CAKE COLLECTION
+
+Filterable cake catalogue.
+
+↓
+
+## 05 — CUSTOM CAKES
+
+“Your Idea. Her Creativity. Your Cake.”
+
+↓
+
+## 06 — OUR STORY
+
+Introduce the baker and home-bakery concept.
+
+↓
+
+## 07 — GALLERY
+
+Authentic cake photography.
+
+↓
+
+## 08 — HOW TO ORDER
+
+Choose → Customize → Confirm → Receive
+
+↓
+
+## 09 — DELIVERY
+
+Verified delivery information.
+
+↓
+
+## 10 — FINAL CTA
+
+“Ready to make your occasion sweeter?”
+
+[Order on WhatsApp]
+
+↓
+
+## 11 — FOOTER
+
+The Desert Diary by SS
+
+Instagram
+
+WhatsApp
+
+Navigation
+```
+
+# DESIGN PRINCIPLE
+
+The hierarchy should always be:
+
+**CAKE → BRAND → STORY → INFORMATION → ORDER**
+
+The cakes should remain the visual hero.
+
+Do not let animation overpower the product.
+
+# RESPONSIVE BREAKPOINTS
+
+Desktop:
+1440px+
+
+Laptop:
+1024–1439px
+
+Tablet:
+768–1023px
+
+Mobile:
+<768px
+
+Mobile should receive a deliberately designed layout rather than simply shrinking the desktop version.
+
+# COMPONENT PRINCIPLE
+
+Each major section should be an independent reusable component.
+
+Cake products should be data-driven.
+
+Business information should be data-driven.
+
+Animations should be reusable.
+
+Images should be optimized.
+
+This makes future maintenance easy.
