@@ -1,0 +1,151 @@
+The server and Preview infrastructure are confirmed working. Do not spend any more time diagnosing ports, workflows, or server configuration.
+
+Now continue the actual implementation of the approved website design.
+
+The current Preview is only showing the temporary scaffold because the visual website build was interrupted.
+
+## TASK: COMPLETE THE ACTUAL WEBSITE
+
+Build the full production-quality “The Desert Diary by SS” bakery website according to the previously provided Master Prompt, SRS, attached brand assets, posters, hoarding, menu and authentic cake photographs.
+
+Do NOT create another scaffold.
+
+Do NOT replace the approved concept with a generic bakery template.
+
+Do NOT rebuild the project from scratch unless technically necessary.
+
+### Priority 1 — Build the visual foundation
+
+Implement:
+
+- Premium cream/ivory background
+- Blush/pastel pink brand palette
+- Rose/berry typography accents
+- Subtle champagne-gold details
+- Floral/botanical decorative elements inspired by the existing hoarding
+- Elegant typography
+- Proper spacing and visual hierarchy
+- Responsive layout
+
+The website should visually belong to the same brand as the supplied hoarding and poster.
+
+### Priority 2 — Build the homepage
+
+Create:
+
+1. Animated brand intro
+2. Full-screen hero
+3. “The Desert Diary”
+4. “by SS”
+5. “You bring the occasion. We’ll bring the cake.”
+6. Authentic cake imagery
+7. “Explore Our Cakes” CTA
+8. “Order Your Cake” CTA
+
+Use subtle cinematic animation.
+
+### Priority 3 — Add premium motion
+
+Implement tasteful:
+
+- Scroll reveal animations
+- Parallax
+- Image reveal effects
+- Staggered cake-card animations
+- Gentle floating floral/petal decorations
+- Elegant hover interactions
+- Smooth section transitions
+
+Use Framer Motion/GSAP where appropriate.
+
+If using Three.js/React Three Fiber, use it selectively for lightweight depth/3D effects. Do NOT turn the site into a game or sacrifice performance.
+
+### Priority 4 — Build the actual bakery catalogue
+
+Use the supplied authentic cake photographs.
+
+Create:
+
+- Cake categories
+- Cake cards
+- Image gallery
+- Cake detail interaction/modal
+- Custom cake section
+- Cupcake section
+- Bento cake section if supported by the supplied assets/menu
+
+Do NOT use generic stock or AI cake photographs.
+
+Do NOT invent prices or product information.
+
+If information is unavailable, use “Price on request” or omit it.
+
+### Priority 5 — Build business sections
+
+Implement:
+
+- Our Story
+- Custom Cakes
+- How to Order
+- Delivery information
+- Gallery
+- Contact / Order CTA
+- Instagram CTA
+- WhatsApp CTA
+- Footer
+
+Use only verified business information from the supplied materials.
+
+### Priority 6 — Mobile experience
+
+Do a deliberate mobile layout, not merely a scaled desktop version.
+
+Check:
+
+- 375px mobile
+- 390px mobile
+- tablet
+- laptop
+- desktop
+
+Ensure:
+
+- No horizontal overflow
+- No clipped text
+- No broken images
+- Buttons are easily tappable
+- Animations remain smooth
+- Navigation works properly
+
+### Priority 7 — Quality control
+
+After implementation:
+
+1. Start the website.
+2. Open the working Preview.
+3. Inspect the actual rendered page.
+4. Fix console errors.
+5. Fix broken image paths.
+6. Fix layout issues.
+7. Fix animation issues.
+8. Check responsive behavior.
+9. Check accessibility.
+10. Check performance.
+
+Do not stop after creating the code.
+
+The final Preview must show the actual finished bakery website rather than a scaffold.
+
+### IMPORTANT
+
+Preserve the existing project and approved brand direction.
+
+The objective is:
+
+**A premium, elegant, cinematic, slightly 3D home-bakery website that makes customers want to browse the cakes and place an order.**
+
+The cakes must remain the hero of the experience.
+
+Animation should support the cakes and brand, not overpower them.
+
+Proceed with implementation now.
