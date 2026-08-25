@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "The Desert Diary Bakery"
+description = "A premium responsive storefront for The Desert Diary by SS, showcasing authentic homemade cakes, custom orders, a gallery, and direct WhatsApp ordering."
+version = "1.0.0"
+id = "artifacts/desert-diary"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20489
+
+[services.development]
+run = "pnpm --filter @workspace/desert-diary run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/desert-diary", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/desert-diary/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20489"
+BASE_PATH = "/"
