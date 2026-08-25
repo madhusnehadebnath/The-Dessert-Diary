@@ -321,9 +321,9 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = selectedCake || lightbox || splashVisible || menuOpen ? 'hidden' : '';
+    document.body.style.overflow = selectedCake || lightbox || splashVisible ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
-  }, [selectedCake, lightbox, splashVisible, menuOpen]);
+  }, [selectedCake, lightbox, splashVisible]);
 
   const visibleCakes = activeCategory === 'All' ? cakes : cakes.filter((cake) => cake.category === activeCategory);
   const openBrief = (cake?: Cake) => {
@@ -344,7 +344,7 @@ function Home() {
     const occasion = String(form.get('occasion') || '').trim();
     const date = String(form.get('date') || '').trim();
     const idea = String(form.get('idea') || '').trim();
-    const message = `Hello ${siteConfig.brand.fullName}!%0A%0AName: ${encodeURIComponent(name)}%0AOcasion: ${encodeURIComponent(occasion)}%0ADate: ${encodeURIComponent(date)}%0AMy idea: ${encodeURIComponent(idea)}`;
+    const message = `Hello ${siteConfig.brand.fullName}!%0A%0AName: ${encodeURIComponent(name)}%0AOccasion: ${encodeURIComponent(occasion)}%0ADate: ${encodeURIComponent(date)}%0AMy idea: ${encodeURIComponent(idea)}`;
     setBriefSent(true);
     window.open(`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
@@ -360,7 +360,7 @@ function Home() {
             <div className="hero-content">
               <div className="hero-copy brand-reveal">
                 <p className="hero-kicker">small-batch cakes · made in her kitchen</p>
-                <h1 className="hero-title" id="hero-title">The<br /><em>Dessert</em><br />Diary</h1>
+                <h1 className="hero-title" id="hero-title">The<br className="hero-break" /> <em>Dessert</em><br className="hero-break" /> Diary</h1>
                 <p className="hero-subtitle">{siteConfig.brand.tagline}</p>
                 <div className="hero-actions">
                   <a className="primary-cta" href="#catalogue" data-testid="link-hero-catalogue">Explore the catalogue <ArrowDownRight size={15} /></a>
