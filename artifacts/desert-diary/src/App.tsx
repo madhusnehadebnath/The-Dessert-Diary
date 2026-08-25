@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type FormEvent, type PointerEvent, type ReactNode } from 'react';
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -19,14 +19,11 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { siteConfig } from '@/config/site';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
-const WHATSAPP_NUMBER = '917908458935';
-const WHATSAPP_DISPLAY = '+91 7908458935';
-const INSTAGRAM_HANDLE = '@the_dessert_diary_8';
-const INSTAGRAM_URL = 'https://www.instagram.com/the_dessert_diary_8/';
 
 type Cake = {
   id: string;
@@ -171,15 +168,18 @@ function Reveal({ children, className = '', delay = 0 }: { children: ReactNode; 
 }
 
 function BrandReveal({ onDone }: { onDone: () => void }) {
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
   useEffect(() => {
-    const timer = window.setTimeout(onDone, 1350);
+    const timer = window.setTimeout(() => onDoneRef.current(), 1550);
     return () => window.clearTimeout(timer);
-  }, [onDone]);
+  }, []);
   return (
-    <div className="brand-splash" aria-label="The Desert Diary by SS">
+    <div className="brand-splash" aria-label={siteConfig.brand.fullName}>
+      <img className="brand-splash-photo" src="/cakes/rose-birthday.jpeg" alt="" aria-hidden="true" />
       <div className="brand-splash-inner">
         <span className="brand-splash-kicker">home bakery · by ss</span>
-        <span className="brand-splash-name">The Desert Diary</span>
+        <span className="brand-splash-name">{siteConfig.brand.name}</span>
         <span className="brand-splash-line">a little sweetness, made personal</span>
       </div>
     </div>
@@ -197,8 +197,8 @@ function Nav({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (value
     <header className="nav-shell">
       <div className="nav-inner">
         <a className="brand-mark" href="#top" data-testid="link-brand-home" onClick={() => setMenuOpen(false)}>
-          <span className="brand-name">The Desert Diary</span>
-          <span className="brand-by">by SS</span>
+          <span className="brand-name">{siteConfig.brand.name}</span>
+          <span className="brand-by">{siteConfig.brand.byline}</span>
         </a>
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
           {links.map((link) => (
@@ -271,7 +271,7 @@ function Lightbox({ image, label, onClose }: { image: string; label: string; onC
     return () => document.removeEventListener('keydown', onKey);
   }, [onClose]);
   return (
-    <div className="modal-backdrop lightbox-backdrop" role="presentation" onClick={onClose}>
+    <div className="modal-backdrop lightbox-backdrop" role="dialog" aria-modal="true" aria-label={label} onClick={onClose}>
       <button className="modal-close" type="button" aria-label="Close image viewer" data-testid="button-close-lightbox" onClick={onClose}><X size={18} /></button>
       <img className="lightbox-image" src={image} alt={label} onClick={(event) => event.stopPropagation()} />
     </div>
@@ -285,10 +285,24 @@ function Home() {
   const [selectedCake, setSelectedCake] = useState<Cake | null>(null);
   const [lightbox, setLightbox] = useState<{ image: string; label: string } | null>(null);
   const [briefSent, setBriefSent] = useState(false);
+  const handleHeroPointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    if (window.innerWidth < 821 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 12;
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 10;
+    event.currentTarget.style.setProperty('--depth-x', `${x}px`);
+    event.currentTarget.style.setProperty('--depth-y', `${y}px`);
+    event.currentTarget.style.setProperty('--depth-rotate', `${x / 9}deg`);
+  };
+  const resetHeroDepth = (event: PointerEvent<HTMLDivElement>) => {
+    event.currentTarget.style.setProperty('--depth-x', '0px');
+    event.currentTarget.style.setProperty('--depth-y', '0px');
+    event.currentTarget.style.setProperty('--depth-rotate', '0deg');
+  };
 
   useEffect(() => {
-    document.title = 'The Desert Diary by SS | Cakes made personal';
-    const description = 'The Desert Diary by SS — custom cakes, cupcakes and little celebrations made to order. You bring the occasion. We’ll bring the cake.';
+    document.title = `${siteConfig.brand.fullName} | Cakes made personal`;
+    const description = siteConfig.brand.description;
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement('meta');
@@ -298,7 +312,7 @@ function Home() {
     meta.setAttribute('content', description);
     const ogTitle = document.querySelector('meta[property="og:title"]') ?? document.createElement('meta');
     ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'The Desert Diary by SS');
+    ogTitle.setAttribute('content', siteConfig.brand.fullName);
     document.head.appendChild(ogTitle);
     const ogDescription = document.querySelector('meta[property="og:description"]') ?? document.createElement('meta');
     ogDescription.setAttribute('property', 'og:description');
@@ -330,9 +344,9 @@ function Home() {
     const occasion = String(form.get('occasion') || '').trim();
     const date = String(form.get('date') || '').trim();
     const idea = String(form.get('idea') || '').trim();
-    const message = `Hello The Desert Diary by SS!%0A%0AName: ${encodeURIComponent(name)}%0AOcasion: ${encodeURIComponent(occasion)}%0ADate: ${encodeURIComponent(date)}%0AMy idea: ${encodeURIComponent(idea)}`;
+    const message = `Hello ${siteConfig.brand.fullName}!%0A%0AName: ${encodeURIComponent(name)}%0AOcasion: ${encodeURIComponent(occasion)}%0ADate: ${encodeURIComponent(date)}%0AMy idea: ${encodeURIComponent(idea)}`;
     setBriefSent(true);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -346,8 +360,8 @@ function Home() {
             <div className="hero-content">
               <div className="hero-copy brand-reveal">
                 <p className="hero-kicker">small-batch cakes · made in her kitchen</p>
-                <h1 className="hero-title" id="hero-title">The<br /><em>Desert</em><br />Diary</h1>
-                <p className="hero-subtitle">You bring the occasion. We’ll bring the cake.</p>
+                <h1 className="hero-title" id="hero-title">The<br /><em>Dessert</em><br />Diary</h1>
+                <p className="hero-subtitle">{siteConfig.brand.tagline}</p>
                 <div className="hero-actions">
                   <a className="primary-cta" href="#catalogue" data-testid="link-hero-catalogue">Explore the catalogue <ArrowDownRight size={15} /></a>
                   <a className="secondary-cta" href="#order" data-testid="link-hero-order">Tell us your idea <ArrowUpRight size={15} /></a>
@@ -356,6 +370,10 @@ function Home() {
                   <span><Heart size={14} /> eggless, always</span>
                   <span><Sparkles size={14} /> made to order</span>
                 </div>
+              </div>
+              <div className="hero-object" aria-label="Featured floral celebration cake" onPointerMove={handleHeroPointerMove} onPointerLeave={resetHeroDepth}>
+                <img src="/cakes/rose-birthday.jpeg" alt="White celebration cake with deep red piped roses" />
+                <span className="hero-object-label">made to order · with love</span>
               </div>
             </div>
             <div className="scroll-cue" aria-hidden="true">scroll to savour</div>
@@ -370,7 +388,7 @@ function Home() {
               <Reveal delay={1}>
                 <p className="eyebrow">a note from the kitchen</p>
                 <h2 className="intro-title" id="story-title">A Little Something <em>for Every Occasion</em></h2>
-                <p className="intro-copy">The Desert Diary is a home bakery by SS, where every cake begins with a conversation. A colour you love. A memory you want to keep. A person who deserves more than an ordinary slice.</p>
+                <p className="intro-copy">{siteConfig.brand.name} is a home bakery by SS, where every cake begins with a conversation. A colour you love. A memory you want to keep. A person who deserves more than an ordinary slice.</p>
                 <p className="intro-copy">From a quiet bento cake to a full theme centrepiece, the details are piped, placed and packed with care — eggless, fresh and made just for your table.</p>
                 <div className="signature">with love, SS</div>
               </Reveal>
@@ -473,7 +491,7 @@ function Home() {
               <p className="eyebrow" style={{ justifyContent: 'center' }}>let’s make a little magic</p>
               <h2 id="order-title">Ready to make your occasion sweeter?</h2>
               <p>Share the first thought. We’ll take it from there.</p>
-              <a className="primary-cta" href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" data-testid="link-whatsapp-cta"><MessageCircle size={16} /> WhatsApp {WHATSAPP_DISPLAY}</a>
+              <a className="primary-cta" href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} target="_blank" rel="noreferrer" data-testid="link-whatsapp-cta"><MessageCircle size={16} /> WhatsApp {siteConfig.contact.whatsappDisplay}</a>
             </Reveal>
             <div className="section-wrap order-form-wrap">
               <Reveal delay={1} className="order-form-card">
@@ -509,8 +527,8 @@ function Home() {
         <footer className="footer">
           <div className="section-wrap footer-grid">
             <div>
-              <a className="brand-mark" href="#top" data-testid="link-footer-home"><span className="brand-name">The Desert Diary</span><span className="brand-by">by SS</span></a>
-              <p className="footer-tagline">You bring the occasion.<br />We’ll bring the cake.</p>
+              <a className="brand-mark" href="#top" data-testid="link-footer-home"><span className="brand-name">{siteConfig.brand.name}</span><span className="brand-by">{siteConfig.brand.byline}</span></a>
+              <p className="footer-tagline">{siteConfig.brand.tagline}</p>
             </div>
             <div>
               <p className="footer-heading">Explore</p>
@@ -524,14 +542,14 @@ function Home() {
             <div>
               <p className="footer-heading">Find the bakery</p>
               <div className="footer-contact">
-                <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" data-testid="link-footer-whatsapp"><MessageCircle size={14} /> WhatsApp {WHATSAPP_DISPLAY}</a>
-                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" data-testid="link-footer-instagram"><Instagram size={14} /> {INSTAGRAM_HANDLE}</a>
+                <a href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} target="_blank" rel="noreferrer" data-testid="link-footer-whatsapp"><MessageCircle size={14} /> WhatsApp {siteConfig.contact.whatsappDisplay}</a>
+                <a href={siteConfig.contact.instagramUrl} target="_blank" rel="noreferrer" data-testid="link-footer-instagram"><Instagram size={14} /> {siteConfig.contact.instagramHandle}</a>
                 <span><Clock3 size={14} /> Made fresh to order</span>
                 <span><MapPin size={14} /> Delivery availability confirmed per order</span>
               </div>
             </div>
           </div>
-          <div className="section-wrap footer-bottom"><span>© {new Date().getFullYear()} The Desert Diary by SS</span><span>eggless cakes · made with care</span></div>
+          <div className="section-wrap footer-bottom"><span>© {new Date().getFullYear()} {siteConfig.brand.fullName}</span><span>eggless cakes · made with care</span></div>
         </footer>
       </div>
       {selectedCake && <CakeModal cake={selectedCake} onClose={() => setSelectedCake(null)} onOrder={() => openBrief(selectedCake)} />}

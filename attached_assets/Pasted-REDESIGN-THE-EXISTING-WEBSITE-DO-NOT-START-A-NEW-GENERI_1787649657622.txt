@@ -1,0 +1,894 @@
+REDESIGN THE EXISTING WEBSITE — DO NOT START A NEW GENERIC TEMPLATE.
+
+PROJECT:
+The Dessert Diary by SS
+A premium home bakery / custom cake brand.
+
+IMPORTANT:
+This is an EXISTING website that already contains useful sections, content, routing and functionality.
+
+I want a major visual and interaction redesign while preserving the good existing architecture.
+
+==================================================
+1. CRITICAL BRAND CORRECTIONS
+==================================================
+
+The correct brand name is:
+
+THE DESSERT DIARY
+
+NOT:
+"The Desert Diary"
+
+There must be ZERO occurrences of the incorrect spelling "Desert" anywhere in the UI, metadata, buttons, footer, headings, page titles, loading screen, accessibility labels or source content.
+
+Correct:
+"The Dessert Diary by SS"
+
+Primary tagline:
+"You bring the occasion. We'll bring the cake."
+
+Secondary brand language can include:
+"a little sweetness, made personal"
+
+The typography of "The Dessert Diary by SS" must feel consistent with the supplied official branding/poster.
+
+Use an elegant luxury serif for "The Dessert Diary" and a refined italic/script treatment for "by SS".
+
+Do NOT use a random modern sans-serif logo.
+
+==================================================
+2. VERY IMPORTANT — REMOVE POSTERS FROM UI
+==================================================
+
+The uploaded bakery hoarding and promotional poster are BRAND REFERENCE MATERIAL ONLY.
+
+DO NOT use the uploaded posters as:
+- website backgrounds
+- hero backgrounds
+- section backgrounds
+- product cards
+- interface panels
+- catalogue thumbnails
+- decorative UI elements
+
+The website currently looks like a poster placed inside a webpage.
+
+This must be fixed.
+
+Instead:
+
+Use the REAL INDIVIDUAL CAKE PHOTOGRAPHS as visual assets.
+
+Build actual website compositions around those photographs.
+
+The poster/hoarding can remain available as an optional gallery/reference item, but NEVER as the primary interface background.
+
+==================================================
+3. NEW CREATIVE DIRECTION
+==================================================
+
+The website should feel like:
+
+LUXURY BAKERY
++
+EDITORIAL FASHION WEBSITE
++
+CINEMATIC FILM
++
+SUBTLE 3D INTERACTIVE EXPERIENCE
+
+It should NOT feel like:
+- a template
+- a Canva poster
+- a basic bakery website
+- a gaming/WebGL site
+- an overly futuristic tech site
+
+The 3D should feel elegant and premium.
+
+Think:
+"editorial luxury with a little magic."
+
+==================================================
+4. COLOR SYSTEM
+==================================================
+
+Use a controlled palette inspired by the official bakery branding:
+
+Ivory / warm cream
+Blush pink
+Soft rose
+Rose pink
+Muted mauve
+Deep burgundy
+Very subtle champagne/gold accents
+
+Suggested approximate palette:
+
+#FFF9F4
+#FCE8E8
+#F7C7D5
+#E94E77
+#8B304D
+#3B202B
+
+Do not make every section pink.
+
+Use large areas of ivory/cream and strategically introduce blush and burgundy.
+
+==================================================
+5. TYPOGRAPHY
+==================================================
+
+Use a sophisticated editorial serif for large headings.
+
+Recommended direction:
+
+Playfair Display / Cormorant Garamond / similar high-quality editorial serif.
+
+Use an elegant italic serif for emphasis.
+
+Use a clean modern sans-serif for:
+- navigation
+- labels
+- buttons
+- product metadata
+- forms
+
+The logo/name should feel visually connected to the supplied poster branding.
+
+Do not use generic bold geometric fonts for the brand name.
+
+Typography should have generous spacing and a luxury editorial hierarchy.
+
+==================================================
+6. CINEMATIC INTRO — IMPORTANT
+==================================================
+
+Create a real cinematic intro/loading experience.
+
+The current static burgundy intro is NOT sufficient.
+
+When the website initially loads:
+
+FULLSCREEN CINEMATIC INTRO
+
+Scene:
+
+Dark warm burgundy/espresso background.
+
+Very subtle floating particles.
+
+Soft out-of-focus pink petals drifting through the scene.
+
+A beautifully lit cake slowly becomes visible.
+
+A warm spotlight gradually reveals the cake.
+
+Then:
+
+THE DESSERT DIARY
+by SS
+
+appears elegantly.
+
+Then:
+
+"a little sweetness, made personal"
+
+Then a small animated indicator:
+
+ENTER THE SWEET WORLD
+
+After approximately 1–2 seconds, transition smoothly into the homepage.
+
+The intro must NOT delay the website excessively.
+
+Use:
+- CSS animation
+- Framer Motion / GSAP
+- lightweight video if an actual video asset is available
+
+If no video asset exists, create a cinematic animated composition using layered images, gradients, particles and motion.
+
+DO NOT fake a video by putting the existing poster into the intro.
+
+==================================================
+7. HOMEPAGE HERO — COMPLETE REDESIGN
+==================================================
+
+The homepage hero should NOT use the uploaded poster.
+
+Create a completely new composition.
+
+Layout:
+
+LEFT:
+Small eyebrow:
+"SMALL-BATCH CAKES · MADE WITH LOVE"
+
+Large editorial heading:
+
+The
+Dessert
+Diary
+
+with "Dessert" highlighted in rose pink / italic styling.
+
+Supporting copy:
+
+"You bring the occasion.
+We'll bring the cake."
+
+CTA buttons:
+
+EXPLORE THE CATALOGUE ↘
+TELL US YOUR IDEA ↗
+
+RIGHT / CENTER:
+
+A beautiful REAL cake photograph presented as the hero object.
+
+Place the cake on a refined pedestal or editorial surface.
+
+Surround it with subtle:
+- floating flower petals
+- botanical elements
+- soft light
+- depth shadows
+- glass/blur layers
+
+Create a subtle 3D/parallax interaction.
+
+Mouse movement should slightly affect:
+- cake depth
+- floral layers
+- background
+- floating particles
+
+Use different transform speeds for different layers.
+
+The effect should be elegant and subtle.
+
+==================================================
+8. 3D INTERACTION
+==================================================
+
+I specifically want a genuine interactive depth experience.
+
+Possible technologies:
+
+React Three Fiber / Three.js
+Framer Motion
+GSAP
+
+Use them intelligently.
+
+DO NOT build a heavy 3D game scene.
+
+Use 3D for:
+- hero depth
+- floating floral elements
+- cake hover
+- product card depth
+- subtle scroll parallax
+- interactive image layers
+
+Performance is extremely important.
+
+Respect prefers-reduced-motion.
+
+On mobile:
+reduce or disable heavy 3D effects while preserving the visual design.
+
+==================================================
+9. HERO MICRO-INTERACTIONS
+==================================================
+
+Buttons:
+
+On hover:
+- subtle elevation
+- soft pink glow
+- arrow moves slightly
+
+Cake:
+- tiny floating movement
+- subtle shadow movement
+
+Petals:
+- slow ambient movement
+
+Cursor:
+optional elegant soft pink follower on desktop only.
+
+Do not overdo cursor effects.
+
+==================================================
+10. BRAND STORY SECTION
+==================================================
+
+Create a clean editorial section.
+
+Heading:
+
+"A Little Something for Every Occasion"
+
+Use one REAL cake photograph on one side.
+
+On the other:
+
+"The Dessert Diary is a home bakery by SS, where every cake begins with a conversation."
+
+Continue with the idea that cakes are:
+- personal
+- handmade
+- eggless
+- made to order
+- designed for the occasion
+
+Keep the copy warm and human.
+
+Avoid generic corporate marketing language.
+
+==================================================
+11. FEATURED CAKES
+==================================================
+
+Create a premium featured-cake section.
+
+Heading:
+
+"Made for the moments worth remembering."
+
+Display 3–4 real cake photographs.
+
+Each card should feel like a luxury product card.
+
+Example:
+
+ROSE OCCASION
+Floral / Birthday
+
+DANCE EXPRESSION
+Custom / Theme
+
+CUPCAKE GARDEN
+Cupcakes
+
+PETAL CREAM
+Floral / Birthday
+
+Cards should have:
+
+- real photograph
+- category label
+- cake name
+- short metadata
+- "VIEW CAKE ↗"
+
+On hover:
+- image zooms slightly
+- card lifts
+- overlay appears
+- details animate in
+
+Do NOT use the poster.
+
+==================================================
+12. CATALOGUE
+==================================================
+
+Preserve the existing catalogue concept but redesign it.
+
+Filters:
+
+ALL
+CUSTOM / THEME CAKES
+FLORAL / BIRTHDAY CAKES
+CUPCAKES
+GLASS CAKES
+TUB CAKES
+TEA-TIME CAKES
+BENTO CAKES
+
+Cards must use the actual cake photographs.
+
+Do NOT use poster compositions.
+
+Filter transitions should animate smoothly.
+
+Cards should stagger into position when the filter changes.
+
+==================================================
+13. CAKE DETAIL EXPERIENCE
+==================================================
+
+Clicking a cake should open either:
+
+A premium detail page
+OR
+a beautiful fullscreen modal.
+
+Show:
+
+Cake photograph
+Cake name
+Category
+Description
+Available customisation
+Flavour
+Size / serving information if available
+Eggless information
+Price / "Price shared on enquiry" if pricing isn't configured
+
+CTA:
+
+ENQUIRE ON WHATSAPP ↗
+
+Do NOT invent prices.
+
+==================================================
+14. CUSTOM CAKE SECTION
+==================================================
+
+Keep the excellent concept:
+
+"Your Idea.
+Her Creativity.
+Your Cake."
+
+But redesign it visually.
+
+Use an ivory/soft blush background.
+
+Show:
+
+REAL custom cake image
+
+and a subtle visual of a cake sketch / design concept.
+
+Add animated elements representing:
+- colour
+- flavour
+- message
+- topper
+- theme
+
+CTA:
+
+START YOUR CAKE BRIEF ↗
+
+==================================================
+15. CUSTOM CAKE FORM
+==================================================
+
+Create a polished enquiry form.
+
+Fields:
+
+Name
+Occasion
+Preferred date
+Cake type
+Approximate servings
+Preferred flavour
+Colour/theme
+Personalised message
+Reference / inspiration
+Additional notes
+
+Make the form feel premium.
+
+Do NOT make it look like a generic HTML form.
+
+At submission:
+validate fields.
+
+Then prepare a WhatsApp enquiry message using the submitted information.
+
+Do not expose API keys.
+
+==================================================
+16. HOW IT WORKS
+==================================================
+
+Create a scroll-driven process section.
+
+Heading:
+
+"From thought to first bite."
+
+Steps:
+
+01
+SEND THE IDEA
+
+02
+MAKE IT YOURS
+
+03
+CONFIRM THE DAY
+
+04
+CELEBRATE
+
+As the user scrolls:
+- a delicate rose-colored line travels across the steps
+- each step activates
+- icon and text animate
+- previous steps become subtly muted
+
+Keep this elegant and minimal.
+
+==================================================
+17. GALLERY
+==================================================
+
+Create a premium masonry gallery using ONLY real cake photographs.
+
+Heading:
+
+"The cakes in their element."
+
+Hover:
+- image subtly zooms
+- small caption appears
+
+Click:
+open fullscreen lightbox.
+
+Lightbox:
+- smooth animation
+- next/previous
+- close
+- keyboard support
+- mobile swipe support
+
+Do not use the poster as the gallery itself.
+
+==================================================
+18. ORDER / CONTACT CTA
+==================================================
+
+Create a beautiful final CTA.
+
+Heading:
+
+"Ready to make your occasion sweeter?"
+
+Supporting text:
+
+"Share the first thought. We'll take it from there."
+
+Primary CTA:
+
+WHATSAPP US ↗
+
+Secondary CTA:
+
+START A CAKE BRIEF ↗
+
+Use the canonical bakery WhatsApp number configured in ONE central configuration file.
+
+==================================================
+19. CONTACT INFORMATION — CENTRALIZE IT
+==================================================
+
+Do NOT hard-code contact information throughout components.
+
+Create a single configuration object/file.
+
+Example:
+
+brand:
+  name: "The Dessert Diary"
+  owner: "SS"
+  tagline: "You bring the occasion. We'll bring the cake."
+
+contact:
+  whatsapp: "[CANONICAL NUMBER]"
+  instagram: "[CANONICAL HANDLE]"
+
+Then use this configuration everywhere.
+
+This makes future changes safe.
+
+IMPORTANT:
+The website currently contains contact details that do not match the approved branding materials.
+
+DO NOT assume which contact number/Instagram handle is correct.
+
+Keep the contact values centralized and easy to change.
+
+==================================================
+20. FOOTER
+==================================================
+
+Create a premium editorial footer.
+
+Brand:
+
+The Dessert Diary by SS
+
+"You bring the occasion.
+We'll bring the cake."
+
+Links:
+The Diary
+Catalogue
+Custom Cakes
+Gallery
+Order
+
+Contact:
+WhatsApp
+Instagram
+
+Use the centralized contact configuration.
+
+==================================================
+21. PAGE TRANSITIONS
+==================================================
+
+Add elegant transitions between major pages.
+
+Use:
+- fade
+- blur
+- slight scale
+- directional slide
+
+Avoid flashy transitions.
+
+The experience should feel cinematic.
+
+==================================================
+22. SCROLL ANIMATIONS
+==================================================
+
+Use scroll-triggered animation for:
+
+Headings
+Images
+Cards
+Process timeline
+Gallery
+
+Preferred behavior:
+
+opacity 0 → 1
+translateY 20px → 0
+scale 0.97 → 1
+
+Use staggered timing.
+
+Do not animate every element.
+
+==================================================
+23. IMAGE TREATMENT
+==================================================
+
+REAL CAKE PHOTOGRAPHS ARE THE SOURCE OF TRUTH.
+
+Do NOT generate fake replacement cakes if real photos exist.
+
+Do NOT distort cake proportions.
+
+Do NOT excessively crop important cake details.
+
+Use object-position intelligently.
+
+Use image optimization/lazy loading.
+
+==================================================
+24. RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+full cinematic experience.
+
+Tablet:
+reduce effects appropriately.
+
+Mobile:
+beautiful vertical composition.
+
+Mobile navigation should become a proper menu.
+
+Make buttons easy to tap.
+
+Use a floating WhatsApp CTA on mobile.
+
+Do not simply shrink the desktop layout.
+
+==================================================
+25. ACCESSIBILITY
+==================================================
+
+Include:
+- semantic HTML
+- alt text
+- keyboard navigation
+- focus states
+- readable contrast
+- aria labels
+- reduced-motion support
+
+==================================================
+26. PERFORMANCE
+==================================================
+
+IMPORTANT.
+
+The website must remain fast.
+
+Do not load massive assets unnecessarily.
+
+Use:
+- WebP/AVIF where appropriate
+- lazy loading
+- responsive images
+- code splitting
+- lightweight animations
+
+Three.js/WebGL must not block the initial render.
+
+The cinematic intro should be optimized.
+
+==================================================
+27. SEO
+==================================================
+
+Correct:
+
+Title:
+The Dessert Diary by SS | Custom Cakes & Homemade Desserts
+
+Description:
+The Dessert Diary by SS — handmade eggless cakes, cupcakes and custom celebration cakes made to order.
+
+Use proper:
+- H1
+- H2
+- image alt text
+- Open Graph metadata
+- favicon
+- canonical URL
+
+==================================================
+28. VERY IMPORTANT DESIGN RULE
+==================================================
+
+Do not simply modify the existing screenshots/posters.
+
+The website should look like a WEBSITE.
+
+The uploaded hoarding/poster should NOT be recognizable as the background of multiple sections.
+
+Instead, create original compositions using:
+- individual cake photographs
+- typography
+- floral elements
+- subtle gradients
+- shadows
+- glass effects
+- 3D depth
+- animation
+
+==================================================
+29. DO NOT DESTROY EXISTING FUNCTIONALITY
+==================================================
+
+Before making changes:
+
+Inspect the existing project.
+
+Understand:
+- routing
+- components
+- asset paths
+- catalogue data
+- form logic
+- existing API
+- workflows
+
+Then modify the existing implementation.
+
+Do not unnecessarily rewrite the entire project.
+
+Do not break working functionality.
+
+==================================================
+30. FINAL QUALITY BAR
+==================================================
+
+The final result should feel like a professional boutique bakery website made by a high-end design studio.
+
+It should communicate:
+
+HANDMADE
+PERSONAL
+ELEGANT
+FEMININE
+WARM
+PREMIUM
+CINEMATIC
+MEMORABLE
+
+The user should immediately think:
+
+"Wow, this is a real premium bakery brand."
+
+NOT:
+
+"This is a website displaying a poster."
+
+==================================================
+31. IMPLEMENTATION WORKFLOW
+==================================================
+
+Work in stages.
+
+FIRST:
+Audit the existing project.
+
+SECOND:
+Fix all "Desert" → "Dessert" errors.
+
+THIRD:
+Remove poster-as-interface usage.
+
+FOURTH:
+Implement the new visual system.
+
+FIFTH:
+Implement cinematic intro.
+
+SIXTH:
+Implement interactive hero.
+
+SEVENTH:
+Implement catalogue/card redesign.
+
+EIGHTH:
+Implement custom cake experience.
+
+NINTH:
+Implement scroll animations and gallery.
+
+TENTH:
+Test desktop/tablet/mobile.
+
+After each major stage:
+run the application and visually inspect it.
+
+Do not stop after creating the code.
+
+Actually verify the rendered result.
+
+If something looks broken, fix it before continuing.
+
+==================================================
+FINAL INSTRUCTION
+==================================================
+
+Do not give me a generic explanation of what you intend to build.
+
+Actually modify the existing website.
+
+Preserve the strongest existing content and architecture.
+
+Transform the visual experience substantially.
+
+The final site must be:
+CINEMATIC + INTERACTIVE + SUBTLY 3D + PREMIUM + BRAND-CONSISTENT.
+
+And above everything:
+
+THE BRAND NAME MUST ALWAYS BE:
+
+THE DESSERT DIARY
+
+with the correct spelling of DESSERT.
