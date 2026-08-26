@@ -197,7 +197,8 @@ function Nav({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (value
     <header className="nav-shell">
       <div className="nav-inner">
         <a className="brand-mark" href="#top" data-testid="link-brand-home" onClick={() => setMenuOpen(false)}>
-          <span className="brand-name">{siteConfig.brand.name}</span>
+          <img className="mobile-brand-logo" src="/dessert-diary-mobile-logo.png" alt="The Dessert Diary by SS" />
+          <span className="brand-name">The <em>Dessert</em> Diary</span>
           <span className="brand-by">{siteConfig.brand.byline}</span>
         </a>
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
